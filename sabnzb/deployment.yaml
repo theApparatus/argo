@@ -14,7 +14,7 @@ spec:
         app: sabnzb-ui
     spec:
       containers:
-      - image: docker pull linuxserver/sabnzbd:latest
+      - image: linuxserver/sabnzbd:latest
         name: sabnzb
         ports:
         - containerPort: 8080
