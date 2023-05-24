@@ -4,13 +4,6 @@ metadata:
   name: sabnzb-app
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: sabnzb-app
-  template:
-    metadata:
-      labels:
-        app: sabnzb-app
     spec:
       containers:
         - name: sabnzb
