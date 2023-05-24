@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eclipse-mosquitto
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: eclipse-mosquitto
+  template:
+    metadata:
+      labels:
+        app: eclipse-mosquitto
+    spec:
+      containers:
+      - image: eclipse-mosquitto:latest
+        name: eclipse-mosquitto
+        ports:
+        - containerPort: 1883
+        - containerPort: 9001
